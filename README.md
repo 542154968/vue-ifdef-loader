@@ -133,14 +133,6 @@ ios_code();
 /// #endif
 ```
 
-## Installation
-
-In webpack build directory:
-
-```
-npm install ifdef-loader --save-dev
-```
-
 ## Configuration
 
 Example of use with TypeScript files, enabling the `DEBUG` and `version` variables:
@@ -240,34 +232,3 @@ MIT
 Contributions in the form of issues or pull requests are welcome.
 
 ## Changes
-
-- v2.3.0 added option `uncomment-prefix` to write code in comments allowing it to pass through linters and syntax checking
-
-- v2.2.0 added option `fill-with-blanks` for removing code with blank spaces instead of `//` comments
-
-- v2.1.0 added support for `#elif` clause.
-
-- v2.0.0 BREAKING CHANGE: options are now passed using the
-  standard Webpack API (`loader-utils`). See below for the upgrade.
-
-- v1.0.0 changed to triple slash comment syntax. Double slash syntax
-  deprecated and available by turning off the `ifdef-triple-slash` option.
-
-- v1.0.3 fixed bug occurring with short lines. Improved handling of line
-  termination (CRLF vs LF) in order to preserve source maps.
-
-- v1.1.0 added support for `#else` clauses.
-
-## Upgrading from v1 to v2
-
-In v2 options are passed differently than v1, so you need to update your `webpack.config.js`.
-Just do the following simple changes:
-
-```js
-/* from */ const q = require("querystring").encode({
-  json: JSON.stringify(opts),
-});
-/* to   */ const q = require("querystring").encode(opts);
-/* you can keep the  ... `ifdef-loader?${q}` ... syntax    */
-/* but it's better to pass options directly (see the docs) */
-```
