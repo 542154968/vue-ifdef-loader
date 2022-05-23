@@ -6,6 +6,10 @@
 - 原 loader 仅支持`// #if xxx` 或 `/// #if xxx`的写法，现可支持 vue 单文件中`template`的`<!-- #if xxx -->`这种写法。
 - `ifdef-fill-with-blanks`默认值改为`true`，默认行为是删除非当前条件环境下的代码，`false`为使用`/`代替非当前环境的代码
 
+### 安装
+
+`npm i vue-ifdef-loader -D`
+
 ### 快速上手
 
 ```js
