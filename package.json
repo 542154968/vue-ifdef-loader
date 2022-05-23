@@ -1,6 +1,6 @@
 {
-  "name": "ifdef-loader",
-  "version": "2.3.2",
+  "name": "vue-ifdef-loader",
+  "version": "0.0.1",
   "description": "",
   "main": "ifdef-loader.js",
   "devDependencies": {
@@ -15,26 +15,17 @@
     "build": "tsc",
     "test": "node node_modules/webpack/bin/webpack.js & tsc & jasmine --no-color"
   },
-  "author": "Antonino Porcino <nino.porcino@gmail.com>",
-  "contributors": [
-    {
-      "name": "Erez Eshkol",
-      "email": "erez@erez.pw"
-    },
-    {
-      "name": "Wisam Ghantous",
-      "url": "https://github.com/gwigwam"
-    }
-  ],
+  "author": "重复过往 <542154968@qq.com>",
+  "contributors": [],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nippur72/ifdef-loader.git"
+    "url": "git+https://github.com/542154968/vue-ifdef-loader.git"
   },
   "bugs": {
-    "url": "https://github.com/nippur72/ifdef-loader/issues"
+    "url": "https://github.com/542154968/vue-ifdef-loader/issues"
   },
-  "homepage": "https://github.com/nippur72/ifdef-loader#readme",
+  "homepage": "https://github.com/542154968/vue-ifdef-loader#readme",
   "dependencies": {
     "loader-utils": "^1.1.0"
   }
