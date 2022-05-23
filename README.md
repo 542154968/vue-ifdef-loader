@@ -17,7 +17,7 @@ const opts = {
   DEBUG: true,
   version: 3,
   age: 15,
-  platform: 'wechat'
+  platform: "wechat",
   // 以上参数是你像在项目中使用的环境变量，可以任意设置，配合环境变量更好用
 
   // 是否打印日志
@@ -137,7 +137,7 @@ ios_code();
 
 Example of use with TypeScript files, enabling the `DEBUG` and `version` variables:
 
-In `webpack.config.json` put `ifdef-loader` after `ts-loader` so that files are processed
+In `webpack.config.json` put `vue-ifdef-loader` after `ts-loader` so that files are processed
 before going into TypeScript compiler:
 
 ```js
@@ -156,7 +156,7 @@ const opts = {
    exclude: /node_modules/,
    use: [
       { loader: "ts-loader" },
-      { loader: "ifdef-loader", options: opts }
+      { loader: "vue-ifdef-loader", options: opts }
    ]
 }
 
@@ -165,7 +165,7 @@ const q = require('querystring').encode(opts);
 /* ... */ {
    test: /\.tsx?$/,
    exclude: /node_modules/,
-   loaders: [ "ts-loader", `ifdef-loader?${q}` ]
+   loaders: [ "ts-loader", `vue-ifdef-loader?${q}` ]
 }
 
 ```
@@ -185,7 +185,7 @@ in `example.ts`:
 
 Often times writing `#if` ... `#else` ... `#endif` results in code that is not syntactically valid
 or does not pass the LINT check. A possible workaround is to hide such code in comments
-and let `ifdef-loader` uncomment it if it's part of the block that has to be included in the output.
+and let `vue-ifdef-loader` uncomment it if it's part of the block that has to be included in the output.
 
 Example:
 
@@ -210,7 +210,7 @@ let a=1;
 ```
 
 The code is now under comment so it's ignored by the linter; but it's uncommented
-by `ifdef-loader` if the else branch has to be included in the output (that is when `DEBUG==false`).
+by `vue-ifdef-loader` if the else branch has to be included in the output (that is when `DEBUG==false`).
 
 The `// #code ` string prefix can be changed and has to be explictly specified
 in the options object:
