@@ -33,8 +33,8 @@ module.exports = {
     // ...
     config.module
       .rule("vue")
-      .use("ifdef-loader")
-      .loader("ifdef-loader")
+      .use("vue-ifdef-loader")
+      .loader("vue-ifdef-loader")
       .tap(() => {
         return opts;
       })
